@@ -50,4 +50,4 @@ The game concept and design draw inspiration from classic arcade games.
 The Tkinter library was used for GUI development.
 Image assets were sourced from star wars wiki.
 
-Feel free to personalize and modify this README to match your game's details and requirements.
+Feel free to personalize and modify this to match your game's details and requirements.
