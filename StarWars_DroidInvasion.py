@@ -15,10 +15,10 @@ from PIL import Image, ImageTk  # Make sure to install the Pillow library for im
 import math
 
 # FILES WHICH WILL NEED TO BE UPDATED ON LOCAL DEVICE:
-background_image_direction = "/Users/jacobmillion/Desktop/Python_Files/Droid_Invasion/nabboo.jpeg"
+background_image_direction = "/Users/jacobmillion/Desktop/Github_Sync/Droid_Invasion/nabboo.jpeg"
 high_score_txt_file = "high_score.txt"
-battle_droid_path = "/Users/jacobmillion/Desktop/Python_Files/Droid_Invasion/droid_image.png"
-super_droid_path = "/Users/jacobmillion/Desktop/Python_Files/Droid_Invasion/super_droid_image.webp"
+battle_droid_path = "/Users/jacobmillion/Desktop/Github_Sync/Droid_Invasion/droid_image.png"
+super_droid_path = "/Users/jacobmillion/Desktop/Github_Sync/Droid_Invasion/super_droid_image.webp"
 ########################################################
 
 # boolean to track when the game is over
