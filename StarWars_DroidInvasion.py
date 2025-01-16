@@ -15,10 +15,10 @@ from PIL import Image, ImageTk  # Make sure to install the Pillow library for im
 import math
 
 # FILES WHICH WILL NEED TO BE UPDATED ON LOCAL DEVICE:
-background_image_direction = "/Users/jacobmillion/Desktop/Github_Sync/Games/Droid_Invasion/nabboo.jpeg"
+background_image_direction = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/nabboo.jpeg"
 high_score_txt_file = "high_score.txt"
-battle_droid_path = "/Users/jacobmillion/Desktop/Github_Sync/Games/Droid_Invasion/droid_image.png"
-super_droid_path = "/Users/jacobmillion/Desktop/Github_Sync/Games/Droid_Invasion/super_droid_image.webp"
+battle_droid_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/droid_image.png"
+super_droid_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/super_droid_image.webp"
 ########################################################
 
 # boolean to track when the game is over
@@ -100,7 +100,7 @@ droid_types = [
 # player settings 
 player_height = 10
 player_width = 100
-player_speed = 10
+player_speed = 20
 circle_radius = player_height // 2
 SABERCOLOR = "springgreen"
 
@@ -159,7 +159,7 @@ canvas.focus_set()
 # Bullet class
 class Bullet:
     def __init__(self, canvas, x, y):
-        self.bullet_speed = 4.5
+        self.bullet_speed = 9
         self.x_coord = x 
         self.y_coord = y 
         self.fill = "red"
@@ -330,7 +330,7 @@ def create_enemy(droid_type):
     if droid_type == "battle_droid":
         droid_width = 35
         droid_height = 60
-        speed = 2.9
+        speed = 5.8
         health = 1
         path = battle_droid_path
         droid = Droid(droid_width, droid_height, canvas, random.randint(droid_width, WIDTH - droid_width), 0, speed, health, path)
@@ -339,7 +339,7 @@ def create_enemy(droid_type):
     elif droid_type == "super_droid":
         droid_width = 50
         droid_height = 70
-        speed = 1
+        speed = 2
         health = 2
         path = super_droid_path
         droid = Droid(droid_width, droid_height, canvas, random.randint(droid_width, WIDTH - droid_width), 0, speed, health, path)
@@ -365,7 +365,7 @@ def move_enemies():
 
 
         # Randomly shoot bullets with a certain probability
-        if random.random() < 0.0165:
+        if random.random() < 0.052:
             enemy_shoot(enemy)
 
     # Check for game over
