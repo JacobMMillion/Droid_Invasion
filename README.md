@@ -32,17 +32,9 @@ bash
 Copy code
 git clone https://github.com/your-username/droid-invasion.git
 cd droid-invasion
-Install required libraries:
-Copy code
-pip install Pillow
+Install required libraries
 Run the game:
-css
-Copy code
 python main.py
-
-Contributing:
-
-Contributions to this project are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request.
 
 Acknowledgments:
 
