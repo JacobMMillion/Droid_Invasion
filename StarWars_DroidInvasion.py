@@ -360,7 +360,7 @@ def create_enemy(droid_type):
     if droid_type == "battle_droid":
         droid_width = 35
         droid_height = 60
-        speed = 5.8
+        speed = 4.5
         health = 1
         path = battle_droid_path
         droid = Droid(droid_width, droid_height, canvas,
