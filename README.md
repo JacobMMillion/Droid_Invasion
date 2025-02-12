@@ -19,31 +19,6 @@ Collision detection for reflected bullets and enemy droids.
 High score tracking and display.
 Game over screen with an option to reset the high score.
 
-System Requirements:
-
-Python 3.x
-Tkinter (Python's standard GUI package)
-Pillow library (for image support)
-Installation and Usage
-
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/droid-invasion.git
-cd droid-invasion
-Install required libraries:
-Copy code
-pip install Pillow
-Run the game:
-css
-Copy code
-python main.py
-
-Contributing:
-
-Contributions to this project are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request.
-
 Acknowledgments:
 
 The game concept and design draw inspiration from classic arcade games.
