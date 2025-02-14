@@ -14,12 +14,16 @@ import random
 from PIL import Image, ImageTk  # Make sure to install Pillow for image support
 import math
 import time  # For tracking elapsed time
+from playsound import playsound
 
 # FILES – UPDATE THESE PATHS ON YOUR LOCAL DEVICE:
 background_image_direction = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/nabboo.jpeg"
 high_score_txt_file = "high_score.txt"
 battle_droid_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/droid_image.png"
 super_droid_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/super_droid_image.webp"
+shoot_audio_file_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/blaster.mp3"
+explosion_audio_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/explosion.wav"
+reflect_audio_path = "/Users/jacobmillion/Desktop/github/droid_invasion/Droid_Invasion/reflect.wav"
 ########################################################
 
 # Global game state variables
@@ -216,6 +220,7 @@ class Bullet:
             canvas.move(self.bullet, self.x_speed, self.y_speed)
     def reflect(self):
         self.reflected = True
+        playsound(reflect_audio_path, block=False)
         player_coords = canvas.coords(player)
         player_left_x = player_coords[0]
         player_right_x = player_coords[2]
@@ -263,6 +268,8 @@ def enemy_shoot(enemy):
     bullet = Bullet(canvas, x, y)
     enemy_bullets.append(bullet)
 
+    playsound(shoot_audio_file_path, block=False)
+
 def move_enemy_bullets():
     try:
         # Iterate over a copy so removals don't affect the loop
@@ -300,6 +307,7 @@ def check_collision_with_enemies():
                     update_points_label()
                     # Full explosion on kill uses 15 particles
                     create_particle_explosion(enemy.get_x(), enemy.get_y(), count=15)
+                    playsound(explosion_audio_path, block=False)
                     enemies.remove(enemy)
                     canvas.delete(enemy.droid)
                 else:
